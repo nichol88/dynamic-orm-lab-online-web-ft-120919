@@ -24,7 +24,7 @@ class Student < InteractiveRecord
     values_array = []
 
     self.class.column_names.each do |col_name|
-      values_array << "'#{self.send(col_name)}'"
+      values_array << "'#{self.send(col_name)}'" unless send(col_name).nil?
     end
 
     values_array.join(', ')
