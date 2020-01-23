@@ -10,5 +10,8 @@ class InteractiveRecord
     info = DB[:conn].execute("PRAGMA table_info(#{table_name})")
     info.map { |col_info_hash| col_info_hash['name'] }
   end
-  
+
+  self.column_names.each do |col_name|
+    attr_accessor col_name.to_sym
+  end
 end
