@@ -7,8 +7,8 @@ class Student < InteractiveRecord
   attr_accessor :id, :name, :grade
 
   def initialize(attributes = [])
-    column_names.each do |col_name
-
+    column_names.each do |col_name|
+      attr_accessor col_name.to_sym
     end
   end
 end
