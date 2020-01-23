@@ -20,7 +20,7 @@ class Student < InteractiveRecord
     self.class.column_names.delete_if{|e| e == 'id'}.join(', ')
   end
 
-  def method_name
+  def values_for_insert
 
   end
 
