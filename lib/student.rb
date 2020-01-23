@@ -4,7 +4,7 @@ require 'interactive_record.rb'
 
 class Student < InteractiveRecord
 
-  def initialize
-        
+  def initialize(attributes)
+
   end
 end
