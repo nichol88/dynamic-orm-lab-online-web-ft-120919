@@ -28,4 +28,8 @@ class Student < InteractiveRecord
     values_array.join(', ')
   end
 
+  def save
+
+  end
+
 end
