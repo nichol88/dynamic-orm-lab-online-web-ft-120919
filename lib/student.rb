@@ -21,12 +21,13 @@ class Student < InteractiveRecord
   end
 
   def values_for_insert
+    values_array = []
 
     self.class.column_names.each do |col_name|
-      self.send(col_name)
+      values_array << self.send(col_name)
     end
 
-    values_array =
+
 
     values_array.join(', ')
 
