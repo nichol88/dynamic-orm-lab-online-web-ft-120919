@@ -10,4 +10,5 @@ class InteractiveRecord
     info = DB[:conn].execute("PRAGMA table_info(#{table_name})")
     info.map { |col_info_hash| col_info_hash['name'] }
   end
+  
 end
