@@ -31,9 +31,9 @@ class Student < InteractiveRecord
   def save
     sql = <<-SQL
     INSERT INTO #{table_name_for_insert} (#{col_names_for_insert})
-    VALUES (?, ?)
+    VALUES (?)
     SQL
-    DB[:conn].execute(sql, values_for_insert[0], values_for_insert[1])
+    DB[:conn].execute(sql, values_for_insert)
   end
 
 end
