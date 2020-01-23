@@ -33,7 +33,7 @@ class Student < InteractiveRecord
     INSERT INTO #{table_name_for_insert} (#{col_names_for_insert[0]} , #{col_names_for_insert[1]})
     VALUES (?, ?)
     SQL
-    DB[:conn].execute(sql, , col_names_for_insert[1], values_for_insert[0], values_for_insert[1])
+    DB[:conn].execute(sql, values_for_insert[0], values_for_insert[1])
   end
 
 end
