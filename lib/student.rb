@@ -29,7 +29,10 @@ class Student < InteractiveRecord
   end
 
   def save
-
+    sql = <<-SQL
+    INSERT INTO ? (? , ?)
+    VALUES (?, ?)
+    SQL
   end
 
 end
