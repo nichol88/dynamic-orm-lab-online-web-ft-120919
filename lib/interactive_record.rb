@@ -8,8 +8,6 @@ class InteractiveRecord
 
   def self.column_names
     info = DB[:conn].execute("PRAGMA table_info(#{table_name})")
-    info.map do |col_info_hash|
-      col_info_hash['name']
-    end
+    info.map { |col_info_hash| col_info_hash['name'] }
   end
 end
