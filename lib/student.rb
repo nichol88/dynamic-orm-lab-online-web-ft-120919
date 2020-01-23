@@ -4,7 +4,7 @@ require 'interactive_record.rb'
 
 class Student < InteractiveRecord
 
-  def initialize(attributes = nil)
+  def initialize(attributes = [])
     attributes.each { |a, v| self.send("#{a}=", v)}
   end
 end
