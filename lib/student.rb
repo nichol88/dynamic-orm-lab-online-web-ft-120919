@@ -21,6 +21,7 @@ class Student < InteractiveRecord
   end
 
   def values_for_insert
+    values_array.join(', ')
 
   end
 
