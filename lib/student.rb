@@ -34,6 +34,7 @@ class Student < InteractiveRecord
     VALUES (#{values_for_insert})
     SQL
     DB[:conn].execute(sql)
+    @id = 
   end
 
 end
