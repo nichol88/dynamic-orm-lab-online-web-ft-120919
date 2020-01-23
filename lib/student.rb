@@ -12,4 +12,8 @@ class Student < InteractiveRecord
     attributes.each{|a,v| self.send("#{a}=", v) }
   end
 
+  def table_name_for_insert
+
+  end
+
 end
