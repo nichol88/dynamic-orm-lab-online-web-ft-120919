@@ -27,8 +27,6 @@ class Student < InteractiveRecord
       values_array << "#{self.send(col_name)}"
     end
 
-
-
     values_array.join(', ')
 
   end
