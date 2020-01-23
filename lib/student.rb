@@ -7,6 +7,8 @@ class Student < InteractiveRecord
   attr_accessor :id, :name, :grade
 
   def initialize(attributes = [])
-    attributes.each { |a, v| self.send("#{a}=", v)}
+    column_names.each do |col_name
+
+    end
   end
 end
