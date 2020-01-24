@@ -54,7 +54,7 @@ class Student < InteractiveRecord
     WHERE #{attribute.keys[0].to_s} = ?
     SQL
 
-    DB[:conn].execute(sql, attribute)
+    DB[:conn].execute(sql, attribute.values[0])
   end
 
 end
