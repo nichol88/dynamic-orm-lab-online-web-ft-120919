@@ -47,14 +47,14 @@ class Student < InteractiveRecord
   end
 
   def self.find_by(attribute)
-    
+
     sql = <<-SQL
     SELECT *
     FROM #{table_name}
     WHERE ?
     SQL
 
-    DB[:conn].execute(sql, attribute)
+    DB[:conn].execute(sql)
   end
 
 end
