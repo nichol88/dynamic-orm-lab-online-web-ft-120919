@@ -34,7 +34,7 @@ class Student < InteractiveRecord
     VALUES (#{values_for_insert})
     SQL
     DB[:conn].execute(sql)
-    @id = DB[:conn].execute("SELECT * from #{table_name_for_insert} get_last_insert_rowid")
+    @id = DB[:conn].execute("SELECT * from #{table_name_for_insert} get_last_insert_rowid")[0][0]
   end
 
 end
