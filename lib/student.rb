@@ -50,7 +50,7 @@ class Student < InteractiveRecord
     sql = <<-SQL
     SELECT *
     FROM #{table_name}
-    WHERE #{attribute.keys[0]} = ?
+    WHERE #{attribute.key} = ?
     SQL
 
     DB[:conn].execute(sql, attribute)
