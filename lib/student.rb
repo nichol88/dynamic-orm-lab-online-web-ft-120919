@@ -50,7 +50,7 @@ class Student < InteractiveRecord
     sql = <<-SQL
     SELECT *
     FROM #{table_name}
-    WHERE #{attribute.key} = #{attribute.value}
+    WHERE #{attribute.keys[0]} = #{attribute.values[0]}
     SQL
   end
 
