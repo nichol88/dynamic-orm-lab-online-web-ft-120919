@@ -51,10 +51,10 @@ class Student < InteractiveRecord
     sql = <<-SQL
     SELECT *
     FROM #{table_name}
-    WHERE #{attribute.index(attribute)} = #{attribute}
+    WHERE #{attribute.keys[0].to_s} = ?
     SQL
 
-    DB[:conn].execute(sql)
+    DB[:conn].execute(sql, attribute)
   end
 
 end
