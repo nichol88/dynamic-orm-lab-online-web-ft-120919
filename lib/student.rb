@@ -49,7 +49,8 @@ class Student < InteractiveRecord
   def self.find_by(attribute)
     sql = <<-SQL
     SELECT *
-    FROM #{table_name}  
+    FROM #{table_name}
+    WHERE #{attribute.key} = #{attribute.value}
     SQL
   end
 
